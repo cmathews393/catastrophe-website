@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "catastrophe-website"
+version = "0.1.0"
+description = "Website for Catastrophe Software"
+authors = ["0xChloe <chloe@catastrophesoftware.com>"]
+license = "AGPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
