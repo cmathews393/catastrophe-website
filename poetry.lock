@@ -12,6 +12,21 @@ files = [
 ]
 
 [[package]]
+name = "bootstrap-flask"
+version = "2.3.3"
+description = "Bootstrap 4 & 5 helper for your Flask projects."
+optional = false
+python-versions = "*"
+files = [
+    {file = "Bootstrap-Flask-2.3.3.tar.gz", hash = "sha256:8c40d846e12af0e66d673bcb883d8344fd5ea95244f54e5b119e680e000ccf49"},
+    {file = "Bootstrap_Flask-2.3.3-py2.py3-none-any.whl", hash = "sha256:4c3d1f1b8ee19081dfc80e03aba5cb19cd92a8d54ba0ba98cee69acffded91d0"},
+]
+
+[package.dependencies]
+Flask = "*"
+WTForms = "*"
+
+[[package]]
 name = "click"
 version = "8.1.7"
 description = "Composable command line interface toolkit"
@@ -249,7 +264,24 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog (>=2.3)"]
 
+[[package]]
+name = "wtforms"
+version = "3.1.1"
+description = "Form validation and rendering for Python web development."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "wtforms-3.1.1-py3-none-any.whl", hash = "sha256:ae7c54b29806c70f7bce8eb9f24afceb10ca5c32af3d9f04f74d2f66ccc5c7e0"},
+    {file = "wtforms-3.1.1.tar.gz", hash = "sha256:5e51df8af9a60f6beead75efa10975e97768825a82146a65c7cbf5b915990620"},
+]
+
+[package.dependencies]
+markupsafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "97778e1e915e8e11751949abc9561a7ef91b2f33c62451c177534685e07cf6c1"
+content-hash = "eacc5ba2e78ecba807d16dca88bfc21d7097f102740e4a3885a1efe7bf1467bd"
