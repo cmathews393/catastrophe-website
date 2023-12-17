@@ -32,14 +32,14 @@ def create_app(test_config=None):
     # routes
 
     @app.route("/")
-    def default():
+    def index():
         return render_template("index.html.j2")
 
     @app.route("/tools")
     def tools():
         return render_template("tools.html.j2")
 
-    if __name__ == "__main__":
-        app.run(debug=True)
+    # if __name__ == "__main__":
+    #     app.run(debug=True)
 
     return app
