@@ -1,0 +1,110 @@
+body,
+html {
+  height: 100%; /* Ensures the gradient covers the full height of the page */
+  margin: 0; /* Removes default margin */
+  background-size: cover; /* Ensures the background covers the entire body without repeating */
+}
+
+.navbar {
+  background-color: transparent !important; /* Makes the navbar background transparent */
+  border-bottom: none; /* Removes any border that might be present */
+}
+
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a bit of depth */
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #333; /* Darker text for headings and paragraphs */
+}
+
+.full-height-iframe {
+  height: 75vh; /* Adjust height according to your actual navbar and margins */
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: none;
+}
+
+body {
+  background: linear-gradient(
+    0deg,
+    rgb(255, 153, 201) 45%,
+    rgb(248, 198, 220) 85%
+  );
+}
+
+.navbar,
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+  background-color: #ff66b2;
+  border-color: #ff66b2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e6399b;
+  border-color: #e6399b;
+}
+
+.btn-secondary {
+  background-color: #f8e6dc;
+  border-color: #f8e6dc;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #f3d6cc;
+  border-color: #f3d6cc;
+}
+
+.btn-danger {
+  background-color: #c7004c;
+  border-color: #c7004c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a3003e;
+  border-color: #a3003e;
+}
+
+body.dark-mode {
+  background: linear-gradient(0deg, #282828, #121212);
+  color: #ccc; /* Light text for dark mode */
+}
+
+.navbar.dark-mode,
+.container.dark-mode {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.btn-dark-mode {
+  background-color: #666;
+  border-color: #444;
+  color: white;
+}
+
+.btn-dark-mode:hover {
+  background-color: #555;
+  border-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(0deg, #282828, #121212);
+    color: #ccc;
+  }
+  .navbar,
+  .container {
+    background-color: rgba(50, 50, 50, 0.8);
+  }
+}
