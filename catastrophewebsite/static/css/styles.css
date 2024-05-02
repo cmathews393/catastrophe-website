@@ -1,7 +1,36 @@
+/* Light Mode Styles */
+.lead {
+  font-size: 1.25rem; /* Bootstrap's default, slightly larger for emphasis */
+  color: #555; /* Slightly darker than usual to enhance readability */
+}
+
+.text-muted {
+  color: #6c757d; /* Default Bootstrap muted text color */
+}
+
+.card {
+  background-color: #fff; /* White background for cards */
+  border: 1px solid rgba(0, 0, 0, 0.125); /* Subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.card-body {
+  padding: 1.25rem; /* Comfortable padding inside card */
+}
+
+.card-text {
+  color: #333; /* Darker text for better readability */
+}
+
 body,
 html {
   height: 100%; /* Ensures the gradient covers the full height of the page */
   margin: 0; /* Removes default margin */
+  background: linear-gradient(
+    0deg,
+    rgb(255, 153, 201) 45%,
+    rgb(248, 198, 220) 85%
+  );
   background-size: cover; /* Ensures the background covers the entire body without repeating */
 }
 
@@ -11,6 +40,12 @@ html {
 }
 
 .container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background for content */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a bit of depth */
@@ -29,19 +64,6 @@ p {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: none;
-}
-
-body {
-  background: linear-gradient(
-    0deg,
-    rgb(255, 153, 201) 45%,
-    rgb(248, 198, 220) 85%
-  );
-}
-
-.navbar,
-.container {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-primary {
@@ -75,36 +97,4 @@ body {
 .btn-danger:hover {
   background-color: #a3003e;
   border-color: #a3003e;
-}
-
-body.dark-mode {
-  background: linear-gradient(0deg, #282828, #121212);
-  color: #ccc; /* Light text for dark mode */
-}
-
-.navbar.dark-mode,
-.container.dark-mode {
-  background-color: rgba(50, 50, 50, 0.8);
-}
-
-.btn-dark-mode {
-  background-color: #666;
-  border-color: #444;
-  color: white;
-}
-
-.btn-dark-mode:hover {
-  background-color: #555;
-  border-color: #333;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(0deg, #282828, #121212);
-    color: #ccc;
-  }
-  .navbar,
-  .container {
-    background-color: rgba(50, 50, 50, 0.8);
-  }
 }

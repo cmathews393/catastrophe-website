@@ -5,8 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}chloemathews.net{% endblock %}</title>
+    <script>
+        // Immediately invoked function to set the dark mode if necessary
+        (function () {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.style.backgroundColor = '#121212'; // Set background to dark instantly
+                document.documentElement.classList.add('dark-mode'); // Add dark mode class instantly
+            }
+        })();
+    </script>
     {{ bootstrap.load_css() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 </head>
 
 <body>
