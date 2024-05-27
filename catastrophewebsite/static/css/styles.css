@@ -98,3 +98,7 @@ p {
   background-color: #a3003e;
   border-color: #a3003e;
 }
+
+.text-primary {
+  color: #ff66b2 !important;
+}

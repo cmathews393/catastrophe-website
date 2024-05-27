@@ -5,15 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}chloemathews.net{% endblock %}</title>
-    <script>
-        // Immediately invoked function to set the dark mode if necessary
-        (function () {
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                document.documentElement.style.backgroundColor = '#121212'; // Set background to dark instantly
-                document.documentElement.classList.add('dark-mode'); // Add dark mode class instantly
-            }
-        })();
-    </script>
     {{ bootstrap.load_css() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
@@ -43,7 +34,6 @@
                     </li>
                 </ul>
             </div>
-            <button onclick="toggleDarkMode()" class="btn btn-dark">Toggle Dark Mode</button>
         </div>
 
     </nav>
@@ -53,32 +43,6 @@
         {% endblock %}
     </div>
     {{ bootstrap.load_js() }}
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            const isDarkMode = body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-            adjustDarkModeStyles(isDarkMode);
-        }
-
-        function adjustDarkModeStyles(enabled) {
-            document.querySelectorAll('.navbar, .container').forEach(function (element) {
-                if (enabled) {
-                    element.classList.add('dark-mode');
-                } else {
-                    element.classList.remove('dark-mode');
-                }
-            });
-        }
-
-        window.onload = function () {
-            const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-            if (isDarkMode) {
-                document.body.classList.add('dark-mode');
-            }
-            adjustDarkModeStyles(isDarkMode);
-        };
-    </script>
 </body>
 
 </html>
